@@ -48,7 +48,7 @@ var alcaldíasLayer = L.geoJSON(null, {
 });
 
 // Cargar el archivo GeoJSON (debe estar en la misma carpeta o cambiar la ruta)
-  fetch('alcaldias.geojson')
+fetch('alcaldias.geojson')
     .then(response => response.json())
     .then(data => {
       alcaldiasLayer.addData(data);
