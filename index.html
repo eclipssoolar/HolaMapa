@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<HTML lang="es">
+<head>
+   <meta charset="UTF-8" />
+   <title>Página  Hola Mapa </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Incluye la hoja de estilos de Leaflet -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+   <style>
+     #map {
+        width: 800px;
+        height: 500px;
+     }
+   </style>
+</head>
+<body>
+   <h1>Hola Mapa </h1>
+<div id="map"></div>
+<!-- Incluye la librería de Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+   var map= L.map('map').setView([19.4326, -99.133],13);
+   // Agrega la capa de mapa base de OpenStreetMap
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   attribution: '© OpenStreetMap contributors' // Muestra el crédito obligatorio
+   }).addTo(map);
+// Agrega un marcador en el centro de la CDMX con un poup abiertopor defecto 
+   L.marker([19.4326, -99.1332]).addTo(map)
+     .bindPopup('Centro de la CDMX')
+     .openPopup();
+
+// Segundo marcador: Coyoacán 
+   L.marker([19.3467, -99.1617]).addTo(map)
+     .bindPopup('Coyoacán');
+</script>
+</body>
+</html>
