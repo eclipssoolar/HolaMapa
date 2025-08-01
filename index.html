@@ -57,7 +57,7 @@
   });
 
   // Cargar el archivo GeoJSON (debe estar en la misma carpeta o cambiar la ruta)
-  fetch('alcaldias.geojson')
+  fetch('alcaldias.geojson') // Cambiar nombre del archivo
     .then(response => response.json())
     .then(data => {
       alcaldiasLayer.addData(data);
@@ -74,5 +74,6 @@
 
 </body>
 </html>
+
 
 
