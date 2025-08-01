@@ -33,7 +33,7 @@
     attribution: '© OpenStreetMap contributors' // Muestra el crédito obligatorio
   }).addTo(map);
 
-    // Agrega un marcador en el centro de la CDMX con un popup abierto por defecto
+   // Agrega un marcador en el centro de la CDMX con un popup abierto por defecto
   L.marker([19.4326, -99.1332]).addTo(map)
     .bindPopup('Centro de la CDMX')
     .openPopup();
@@ -41,6 +41,26 @@
  // Segundo marcador: Coyoacán
   L.marker([19.3467, -99.1617]).addTo(map)
     .bindPopup('Coyoacán');
+
+  // Tercer marcador: Centro Histórico
+  L.marker([19.4326, -99.1332]).addTo(map)
+    .bindPopup('Centro Histórico');
+
+  // Cuarto marcador: La Bombilla
+  L.marker([19.3429, -99.1897]).addTo(map)
+    .bindPopup('La Bombilla');
+
+  // Quinto marcador: Parque México
+  L.marker([19.4123, -99.1700]).addTo(map)
+    .bindPopup('Parque México');
+
+  // Sexto marcador: La Merced
+  L.marker([19.4260, -99.1209]).addTo(map)
+    .bindPopup('La Merced');
+
+  // Séptimo marcador: Mercado de Jamaica
+  L.marker([19.4176, -99.1243]).addTo(map)
+    .bindPopup('Mercado de Jamaica');
 
   // Define la capa vacía para las alcaldías
   var alcaldiasLayer = L.geoJSON(null, {
@@ -74,6 +94,7 @@
 
 </body>
 </html>
+
 
 
 
