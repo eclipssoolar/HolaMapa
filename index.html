@@ -62,12 +62,16 @@
   L.marker([19.4176, -99.1243]).addTo(map)
     .bindPopup('Mercado de Jamaica');
 
+  // Octavo marcador: Mercado de Sonora
+  L.marker([19.4272, -99.1246]).addTo(map)
+    .bindPopup('Mercado de Sonora');
+
   // Define la capa vacía para las alcaldías
   var alcaldiasLayer = L.geoJSON(null, {
     style: {
-      color: 'pink',
+      color: 'brown',
       weight: 3,
-      fillOpacity: 0.1
+      fillOpacity: 0.3
     },
     onEachFeature: function (feature, layer) {
       if (feature.properties && feature.properties.NOMGEO) {
@@ -94,6 +98,7 @@
 
 </body>
 </html>
+
 
 
 
